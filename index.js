@@ -1,8 +1,9 @@
 const express = require('express');
-
 const app = express()
-app.use(()=>{
-    console.log('SERVER TEST');
-})
+const productRoutes = require('./src/routes/products')
+
+
+
+app.use('/',productRoutes)
 
 app.listen(4000)
