@@ -5,9 +5,8 @@ exports.createBlog = (req, res, next) => {
   const result = {
     message: "Create Blog Success !",
     data: {
-      post_id: ID,
       title: "data title",
-    //   image: "data-image-name.png",
+      image: "data-image-name.png",
       body: "data body content blog",
       created_at: "12/12/2021",
       author: {
