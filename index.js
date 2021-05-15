@@ -1,7 +1,9 @@
 const express = require('express');
 const bodyParser = require('body-parser')
 const app = express()
-const productRoutes = require('./src/routes/products')
+
+const authRoutes = require('./src/routes/auth');
+const blogRoutes = require('./src/routes/blog');
 
 app.use(bodyParser.json())
 
@@ -13,6 +15,7 @@ app.use((req,res,next)=>{
 })
 
 
-app.use('/v1',productRoutes)
+app.use('/v1/auth',authRoutes)
+app.use('/v1/blog',blogRoutes)
 
 app.listen(4000)

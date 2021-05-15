@@ -1,0 +1,105 @@
+STANDART API = {root.api}/{version}/{grouping}/{endpoint}
+SAMPLE       = https://mern-api.hikids.com/v1/auth/login
+API_URI      = {root.api}/{version}
+
+STANDART STATUS REPSONSE
+200 -> OK
+201 -> CREATED
+400 -> BAD REQUEST
+401 -> UNAUTHORIZED
+403 -> FORBIDDEN
+404 -> NOT FOUND
+500 -> INTERNAL SERVER ERROR
+502 -> BAD GATEWAY
+
+GROUP = Authentication
+[2] - Register
+      API_URI/register
+
+req : {
+    "name" : "data name",
+    "email" : "data email",
+    "password" : "data password"
+}
+
+res : {
+    "message" : "Text Response",
+    "data" : {
+        "id" : ID,
+        "name" : "data name",
+        "email" : "data email
+    }
+}
+err =>
+400 -> "input yang anda masukan tidak valid";
+
+
+[1] - login
+req : {
+    "email" : "data email",
+    "password" : "data password"
+}
+
+res : {
+    "message" : "Text Response",
+    "data" : {
+        "id" : ID,
+        "name" : "data name",
+        "email" : "data email
+    }
+}
+err =>
+400 -> "input yang anda masukan tidak valid";
+
+GROUP : BLOG
+[1] - Create Blog
+req : {
+    "title" : "data title",
+    "image" : "data image",
+    "body" : "data body (text content blog)"
+}
+
+res : {
+    "message" : "Create Blog Success !",
+    "data" : {
+        "post_id" : ID,
+        "title" : "data title",
+        "image" : "data-image-name.png",
+        "body" : "data body content blog",
+        "created_at" : "12/12/2021",
+        "author" : {
+            "uid" : 1,
+            "name" : "test name author",
+        }
+
+    }
+}
+err =>
+400 -> "input yang anda masukan tidak valid";
+201 -> "Create Blog Sucess !"
+
+
+[1] - login
+req : {
+    "email" : "data email",
+    "password" : "data password"
+}
+
+res : {
+    "message" : "Text Response",
+    "data" : {
+        "id" : ID,
+        "name" : "data name",
+        "email" : "data email
+    }
+}
+err =>
+400 -> "input yang anda masukan tidak valid";
+
+[2] - Get Blog
+[3] - Update Blog
+[4] - Delete Blog
+
+
+
+
